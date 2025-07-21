@@ -21,31 +21,31 @@ def string_length_frequency(arr):
 
 
 class TestStringLengthFrequency(unittest.TestCase):
-    def test_basic(self):
+    def test_1(self):
         arr = ["a", "bb", "ccc", "dd", "ee", "f"]
         self.assertEqual(string_length_frequency(arr), ["bb", "dd", "ee"])
 
-    def test_all_same_length(self):
+    def test_2(self):
         arr = ["aa", "bb", "cc"]
         self.assertEqual(sorted(string_length_frequency(arr)), sorted(["aa", "bb", "cc"]))
 
-    def test_unique_lengths(self):
+    def test_3(self):
         arr = ["a", "bb", "ccc", "dddd"]
         self.assertEqual(sorted(string_length_frequency(arr)), ["a"])
 
-    def test_empty_array(self):
+    def test_4(self):
         arr = []
         self.assertEqual(string_length_frequency(arr), [])
 
-    def test_tie_for_max_frequency(self):
+    def test_5(self):
         arr = ["a", "b", "cc", "dd"]
         self.assertEqual(sorted(string_length_frequency(arr)), sorted(["a", "b"]))
 
-    def test_single_element(self):
+    def test_6(self):
         arr = ["hello"]
         self.assertEqual(string_length_frequency(arr), ['hello'])
 
-    def test_mixed(self):
+    def test_7(self):
         arr = ["a", "bb", "c", "dd", "e", "ff"]
         self.assertEqual(sorted(string_length_frequency(arr)), sorted(["a", "c", "e"]))
 
